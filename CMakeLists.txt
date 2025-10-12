@@ -27,6 +27,10 @@ set(SOURCES
     src/ez_generator.cpp
     src/user_interface.cpp
     src/geometry_utils.cpp
+    src/progress_indicator.cpp
+    src/ground_modeler.cpp
+    src/logger.cpp
+    src/memory_manager.cpp
 )
 
 # Header files
@@ -39,6 +43,11 @@ set(HEADERS
     include/ez_generator.h
     include/user_interface.h
     include/geometry_utils.h
+    include/progress_indicator.h
+    include/ground_modeler.h
+    include/logger.h
+    include/validator.h
+    include/memory_manager.h
 )
 
 # Create executable
@@ -53,3 +62,5 @@ endif()
 
 # Installation
 install(TARGETS stl-to-eznec DESTINATION bin)
+
+

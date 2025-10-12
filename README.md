@@ -101,7 +101,7 @@ The tool will guide you through an interactive process:
 
 1. **STL File Selection**: Choose your 3D model file
 2. **Material Selection**: Select the appropriate vehicle material
-3. **Frequency Input**: Enter the highest antenna frequency (or highest known operation frequency )
+3. **Frequency Input**: Enter the highest antenna frequency (or 0 for no antenna)
 4. **Vehicle Type**: Specify the type of vehicle
 5. **Marine Parameters**: For ships/boats, enter waterline height and water type
 6. **Scaling**: Optionally scale the model to correct dimensions

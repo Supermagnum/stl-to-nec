@@ -25,6 +25,9 @@ UserInput UserInterface::getUserInput() {
     // Get frequency input
     input.frequencyMHz = getFrequencyInput();
     
+    // Get antenna detection option
+    input.enableAntennaDetection = getAntennaDetectionOption();
+    
     // Get vehicle type
     input.vehicleType = getVehicleType();
     
@@ -253,11 +256,24 @@ bool UserInterface::getAntennaConfirmation(bool antennaDetected) {
     return (response == "y" || response == "Y" || response == "yes" || response == "YES");
 }
 
+bool UserInterface::getAntennaDetectionOption() {
+    std::cout << "\n=== Antenna Detection ===\n";
+    std::cout << "Enable automatic antenna detection? (y/n): ";
+    std::cout << "This will search for thin wire-like objects in your STL model.\n";
+    std::cout << "Disable if you know your model has no antennas or want structure-only modeling.\n\n";
+    
+    std::string response;
+    std::getline(std::cin, response);
+    
+    return (response == "y" || response == "Y" || response == "yes" || response == "YES");
+}
+
 void UserInterface::printConversionSummary(const UserInput& input) {
     std::cout << "\n=== Conversion Summary ===\n";
     std::cout << "STL file: " << input.stlFilename << "\n";
     std::cout << "Material: " << input.material.name << "\n";
     std::cout << "Frequency: " << std::fixed << std::setprecision(1) << input.frequencyMHz << " MHz\n";
+    std::cout << "Antenna detection: " << (input.enableAntennaDetection ? "Enabled" : "Disabled") << "\n";
     std::cout << "Vehicle type: " << static_cast<int>(input.vehicleType) << "\n";
     
     if (input.vehicleType == VehicleType::SHIP || input.vehicleType == VehicleType::BOAT) {

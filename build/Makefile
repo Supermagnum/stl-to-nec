@@ -270,6 +270,54 @@ src/geometry_utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/geometry_utils.cpp.s
 .PHONY : src/geometry_utils.cpp.s
 
+src/ground_modeler.o: src/ground_modeler.cpp.o
+.PHONY : src/ground_modeler.o
+
+# target to build an object file
+src/ground_modeler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/ground_modeler.cpp.o
+.PHONY : src/ground_modeler.cpp.o
+
+src/ground_modeler.i: src/ground_modeler.cpp.i
+.PHONY : src/ground_modeler.i
+
+# target to preprocess a source file
+src/ground_modeler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/ground_modeler.cpp.i
+.PHONY : src/ground_modeler.cpp.i
+
+src/ground_modeler.s: src/ground_modeler.cpp.s
+.PHONY : src/ground_modeler.s
+
+# target to generate assembly for a file
+src/ground_modeler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/ground_modeler.cpp.s
+.PHONY : src/ground_modeler.cpp.s
+
+src/logger.o: src/logger.cpp.o
+.PHONY : src/logger.o
+
+# target to build an object file
+src/logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/logger.cpp.o
+.PHONY : src/logger.cpp.o
+
+src/logger.i: src/logger.cpp.i
+.PHONY : src/logger.i
+
+# target to preprocess a source file
+src/logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/logger.cpp.i
+.PHONY : src/logger.cpp.i
+
+src/logger.s: src/logger.cpp.s
+.PHONY : src/logger.s
+
+# target to generate assembly for a file
+src/logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/logger.cpp.s
+.PHONY : src/logger.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -318,6 +366,30 @@ src/material_database.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/material_database.cpp.s
 .PHONY : src/material_database.cpp.s
 
+src/memory_manager.o: src/memory_manager.cpp.o
+.PHONY : src/memory_manager.o
+
+# target to build an object file
+src/memory_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/memory_manager.cpp.o
+.PHONY : src/memory_manager.cpp.o
+
+src/memory_manager.i: src/memory_manager.cpp.i
+.PHONY : src/memory_manager.i
+
+# target to preprocess a source file
+src/memory_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/memory_manager.cpp.i
+.PHONY : src/memory_manager.cpp.i
+
+src/memory_manager.s: src/memory_manager.cpp.s
+.PHONY : src/memory_manager.s
+
+# target to generate assembly for a file
+src/memory_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/memory_manager.cpp.s
+.PHONY : src/memory_manager.cpp.s
+
 src/nec_generator.o: src/nec_generator.cpp.o
 .PHONY : src/nec_generator.o
 
@@ -341,6 +413,30 @@ src/nec_generator.s: src/nec_generator.cpp.s
 src/nec_generator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/nec_generator.cpp.s
 .PHONY : src/nec_generator.cpp.s
+
+src/progress_indicator.o: src/progress_indicator.cpp.o
+.PHONY : src/progress_indicator.o
+
+# target to build an object file
+src/progress_indicator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/progress_indicator.cpp.o
+.PHONY : src/progress_indicator.cpp.o
+
+src/progress_indicator.i: src/progress_indicator.cpp.i
+.PHONY : src/progress_indicator.i
+
+# target to preprocess a source file
+src/progress_indicator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/progress_indicator.cpp.i
+.PHONY : src/progress_indicator.cpp.i
+
+src/progress_indicator.s: src/progress_indicator.cpp.s
+.PHONY : src/progress_indicator.s
+
+# target to generate assembly for a file
+src/progress_indicator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stl-to-eznec.dir/build.make CMakeFiles/stl-to-eznec.dir/src/progress_indicator.cpp.s
+.PHONY : src/progress_indicator.cpp.s
 
 src/stl_parser.o: src/stl_parser.cpp.o
 .PHONY : src/stl_parser.o
@@ -415,15 +511,27 @@ help:
 	@echo "... src/geometry_utils.o"
 	@echo "... src/geometry_utils.i"
 	@echo "... src/geometry_utils.s"
+	@echo "... src/ground_modeler.o"
+	@echo "... src/ground_modeler.i"
+	@echo "... src/ground_modeler.s"
+	@echo "... src/logger.o"
+	@echo "... src/logger.i"
+	@echo "... src/logger.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/material_database.o"
 	@echo "... src/material_database.i"
 	@echo "... src/material_database.s"
+	@echo "... src/memory_manager.o"
+	@echo "... src/memory_manager.i"
+	@echo "... src/memory_manager.s"
 	@echo "... src/nec_generator.o"
 	@echo "... src/nec_generator.i"
 	@echo "... src/nec_generator.s"
+	@echo "... src/progress_indicator.o"
+	@echo "... src/progress_indicator.i"
+	@echo "... src/progress_indicator.s"
 	@echo "... src/stl_parser.o"
 	@echo "... src/stl_parser.i"
 	@echo "... src/stl_parser.s"

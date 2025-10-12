@@ -30,6 +30,17 @@ struct Point3D {
     Point3D operator*(double scalar) const {
         return Point3D(x * scalar, y * scalar, z * scalar);
     }
+    
+    // Comparison operators for use in std::map
+    bool operator<(const Point3D& other) const {
+        if (x != other.x) return x < other.x;
+        if (y != other.y) return y < other.y;
+        return z < other.z;
+    }
+    
+    bool operator==(const Point3D& other) const {
+        return x == other.x && y == other.y && z == other.z;
+    }
 };
 
 struct Triangle {
@@ -131,6 +142,17 @@ public:
     static double calculateWireRadius(const std::vector<Triangle>& triangles);
     static bool arePointsCoincident(const Point3D& p1, const Point3D& p2, double tolerance = 1e-6);
     static std::vector<std::vector<Triangle>> separateConnectedComponents(const std::vector<Triangle>& triangles);
+    
+    // Enhanced STL processing methods
+    static std::vector<Point3D> extractWirePathAdvanced(const std::vector<Triangle>& triangles);
+    static std::vector<Point3D> simplifyWirePath(const std::vector<Point3D>& path, double tolerance = 1e-3);
+    static double calculateWireLength(const std::vector<Point3D>& path);
+    static bool isReasonableWireGeometry(const std::vector<Triangle>& triangles);
+    static std::vector<Point3D> findWireEndpoints(const std::vector<Triangle>& triangles);
+    static double calculateWireAspectRatio(const std::vector<Triangle>& triangles);
+    static std::vector<Point3D> interpolateWirePath(const std::vector<Point3D>& path, int segments);
 };
 
 } // namespace stl_to_eznec
+
+

@@ -23,6 +23,7 @@ struct UserInput {
     MaterialProperties material;
     double frequencyMHz;
     bool hasAntenna;
+    bool enableAntennaDetection;
     VehicleType vehicleType;
     double waterlineHeight;  // For ships/boats only
     WaterProperties* waterProperties;  // For ships/boats only
@@ -30,8 +31,8 @@ struct UserInput {
     std::string outputEZFilename;
     std::string modelName;
     
-    UserInput() : frequencyMHz(0), hasAntenna(false), vehicleType(VehicleType::UNKNOWN), 
-                  waterlineHeight(0), waterProperties(nullptr) {}
+    UserInput() : frequencyMHz(0), hasAntenna(false), enableAntennaDetection(true), 
+                  vehicleType(VehicleType::UNKNOWN), waterlineHeight(0), waterProperties(nullptr) {}
 };
 
 class UserInterface {
@@ -52,6 +53,9 @@ public:
     
     // Get antenna detection result
     bool getAntennaConfirmation(bool antennaDetected);
+    
+    // Get antenna detection enable/disable option
+    bool getAntennaDetectionOption();
     
     // Get vehicle type
     VehicleType getVehicleType();

@@ -64,16 +64,24 @@ int main() {
             frequency.printFrequencyInfo();
         }
         
-        // Detect antenna
-        AntennaWire antenna = detector.detectAntenna(triangles);
-        ui.printAntennaDetectionResult(antenna);
+        // Detect antenna (if enabled)
+        AntennaWire antenna;
+        bool hasAntenna = false;
         
-        // Confirm antenna detection
-        bool hasAntenna = antenna.isDetected;
-        if (antenna.isDetected) {
-            hasAntenna = ui.getAntennaConfirmation(true);
+        if (input.enableAntennaDetection) {
+            antenna = detector.detectAntenna(triangles);
+            ui.printAntennaDetectionResult(antenna);
+            
+            // Confirm antenna detection
+            if (antenna.isDetected) {
+                hasAntenna = ui.getAntennaConfirmation(true);
+            } else {
+                hasAntenna = ui.getAntennaConfirmation(false);
+            }
         } else {
-            hasAntenna = ui.getAntennaConfirmation(false);
+            std::cout << "Antenna detection disabled. Processing structure only.\n";
+            antenna = AntennaWire(); // Empty antenna
+            hasAntenna = false;
         }
         
         // Generate NEC file

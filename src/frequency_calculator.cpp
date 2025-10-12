@@ -72,3 +72,5 @@ std::string FrequencyCalculator::getBandName(double frequencyMHz) const {
 }
 
 } // namespace stl_to_eznec
+
+
